@@ -1,0 +1,309 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: 
+    linear-gradient(135deg, rgba(10, 15, 26, 0.6) 0%, rgba(26, 35, 50, 0.6) 50%, rgba(42, 52, 65, 0.6) 100%),
+    url('../assets/Eu.png') center/100% no-repeat,
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(135, 206, 235, 0.03) 2px,
+      rgba(135, 206, 235, 0.03) 4px
+    );
+  background-attachment: scroll;
+  background-size: 58%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  object-fit: contain;
+  object-position: center;
+  z-index: 1;
+  border: 2px solid #87ceeb;
+  box-shadow: 
+    inset 0 0 20px rgba(135, 206, 235, 0.1),
+    0 0 40px rgba(135, 206, 235, 0.2);
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 0 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(0.5px);
+}
+
+.hero-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+  padding-top: 23rem;
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 600px;
+}
+
+
+
+.hero-title {
+  font-size: clamp(1.8rem, 6vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  font-family: 'Press Start 2P', monospace;
+  color: #87ceeb;
+  text-shadow: 
+    0 0 10px #87ceeb,
+    0 0 20px #87ceeb,
+    0 0 30px #87ceeb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.static-text {
+  color: #87ceeb;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: 'Press Start 2P', monospace;
+  text-shadow: 0 0 10px #87ceeb;
+  text-align: center;
+  width: 100%;
+}
+
+.dynamic-text-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1.2em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dynamic-text {
+  display: inline-block;
+  font-weight: 800;
+  font-family: 'Press Start 2P', monospace;
+  text-shadow: 0 0 20px currentColor;
+  color: #87ceeb;
+  position: relative;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+
+.hero-subtitle {
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  color: #87ceeb;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  font-family: 'Share Tech Mono', monospace;
+  text-shadow: 0 0 10px #87ceeb;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid #87ceeb;
+  padding: 0.8rem;
+  background: rgba(135, 206, 235, 0.05);
+  box-shadow: inset 0 0 10px rgba(135, 206, 235, 0.1);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 15px 30px;
+  border: 3px solid #00ffff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  background: rgba(0, 255, 255, 0.1);
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.5),
+    inset 0 0 20px rgba(0, 255, 255, 0.1);
+  min-width: 180px;
+  min-height: 50px;
+  overflow: visible;
+  z-index: 1;
+}
+
+.btn-primary {
+  background: rgba(0, 255, 255, 0.2);
+  color: #00ffff;
+  border: 3px solid #00ffff;
+  box-shadow: 
+    0 0 25px rgba(0, 255, 255, 0.6),
+    inset 0 0 25px rgba(0, 255, 255, 0.2);
+}
+
+.btn-primary:hover {
+  background: rgba(0, 255, 255, 0.3);
+  box-shadow: 
+    0 0 35px rgba(0, 255, 255, 0.8),
+    inset 0 0 35px rgba(0, 255, 255, 0.3);
+  transform: translateY(-3px);
+  scale: 1.05;
+}
+
+.btn-secondary {
+  background: rgba(255, 0, 255, 0.1);
+  color: #ff00ff;
+  border: 3px solid #ff00ff;
+  box-shadow: 
+    0 0 20px rgba(255, 0, 255, 0.4),
+    inset 0 0 20px rgba(255, 0, 255, 0.1);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 0, 255, 0.2);
+  box-shadow: 
+    0 0 30px rgba(255, 0, 255, 0.6),
+    inset 0 0 30px rgba(255, 0, 255, 0.2);
+  transform: translateY(-3px);
+  scale: 1.05;
+}
+
+
+/* Melhorias de acessibilidade e funcionalidade */
+.btn-primary:active,
+.btn-secondary:active {
+  transform: translateY(-1px);
+  scale: 0.98;
+}
+
+.btn-primary:focus,
+.btn-secondary:focus {
+  outline: 3px solid #00ffff;
+  outline-offset: 2px;
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Garantir que toda a área do link seja clicável */
+.btn-primary,
+.btn-secondary {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Remover estilos conflitantes de links */
+.btn-primary a,
+.btn-secondary a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Animações de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .hero-layout {
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-layout {
+    gap: 1.5rem;
+    padding-top: 3rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    min-width: 200px;
+    min-height: 55px;
+    font-size: 0.8rem;
+    padding: 12px 25px;
+  }
+  
+  
+  .floating-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
