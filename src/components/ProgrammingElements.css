@@ -16,7 +16,7 @@
   top: 20%;
   right: 10%;
   background: rgba(0, 0, 0, 0.8);
-  border: 1px solid #00ff88;
+  border: 1px solid #87ceeb;
   border-radius: 8px;
   padding: 1rem;
   max-width: 300px;
@@ -24,13 +24,13 @@
 }
 
 .code-snippet {
-  font-family: var(--font-pixel);
+  font-family: 'Share Tech Mono', monospace;
   font-size: 0.6rem;
   line-height: 1.4;
-  color: #00ff88;
+  color: #87ceeb;
   margin: 0;
   white-space: pre-wrap;
-  text-shadow: 0 0 5px #00ff88;
+  text-shadow: 0 0 5px #87ceeb;
 }
 
 /* Terminal flutuante */
@@ -39,7 +39,7 @@
   top: 60%;
   left: 5%;
   background: rgba(0, 0, 0, 0.9);
-  border: 1px solid #00ff88;
+  border: 1px solid #87ceeb;
   border-radius: 8px;
   width: 280px;
   backdrop-filter: blur(10px);
@@ -50,12 +50,12 @@
 }
 
 .terminal-header {
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(135, 206, 235, 0.1);
   padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #00ff88;
+  border-bottom: 1px solid #87ceeb;
 }
 
 .terminal-buttons {
@@ -75,14 +75,14 @@
 .btn.green { background: #27ca3f; }
 
 .terminal-title {
-  font-family: var(--font-pixel);
+  font-family: 'Share Tech Mono', monospace;
   font-size: 0.5rem;
-  color: #00ff88;
+  color: #87ceeb;
 }
 
 .terminal-body {
   padding: 0.8rem;
-  font-family: var(--font-pixel);
+  font-family: 'Share Tech Mono', monospace;
   font-size: 0.5rem;
   line-height: 1.4;
 }
@@ -92,7 +92,7 @@
 }
 
 .prompt {
-  color: #00ff88;
+  color: #87ceeb;
   margin-right: 0.5rem;
 }
 
@@ -101,12 +101,12 @@
 }
 
 .output {
-  color: #4ecdc4;
+  color: #00ffff;
   margin-left: 1rem;
 }
 
 .cursor {
-  color: #00ff88;
+  color: #87ceeb;
   animation: blink 1s infinite;
 }
 
@@ -133,11 +133,11 @@
 }
 
 .matrix-char {
-  font-family: var(--font-pixel);
+  font-family: 'Share Tech Mono', monospace;
   font-size: 0.8rem;
-  color: #00ff88;
+  color: #87ceeb;
   line-height: 1;
-  text-shadow: 0 0 3px #00ff88;
+  text-shadow: 0 0 3px #87ceeb;
   opacity: 0.7;
 }
 
@@ -156,16 +156,16 @@
 .hexagon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(45deg, #00ff88, #4ecdc4);
+  background: linear-gradient(45deg, #87ceeb, #00ffff);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  box-shadow: 0 0 20px rgba(135, 206, 235, 0.5);
 }
 
 .hex-content {
-  font-family: var(--font-pixel);
+  font-family: 'Press Start 2P', monospace;
   font-size: 0.8rem;
   color: #000;
   font-weight: bold;

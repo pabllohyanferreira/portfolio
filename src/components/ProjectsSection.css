@@ -1,5 +1,6 @@
 .projects-section {
-  padding: 6rem 0;
+  margin: 0;
+  padding: 0;
   background: linear-gradient(135deg, #0a0f1a 0%, #1a2332 50%, #2a3441 100%);
   position: relative;
   overflow: hidden;
@@ -125,13 +126,20 @@
   position: relative;
   z-index: 1;
   order: 1;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
 }
 
 .project-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: center;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
 }
 
 .project-category {
@@ -142,6 +150,11 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
+  text-align: center !important;
+  width: 100% !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .project-title {
@@ -152,7 +165,11 @@
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-align: center;
+  text-align: center !important;
+  width: 100% !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .project-description {
@@ -162,10 +179,12 @@
   text-shadow: 0 0 15px rgba(135, 206, 235, 0.3);
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  text-align: center;
+  text-align: center !important;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+  display: block !important;
 }
 
 .project-technologies {
@@ -174,6 +193,8 @@
   gap: 0.5rem;
   margin-bottom: 0;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .tech-tag {
@@ -203,8 +224,9 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   background: #000;
   /* Vídeo abaixo da descrição */
-  min-height: 500px;
   width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
   transform: scale(1.0);
   transform-origin: center;
   order: 2;
@@ -212,29 +234,45 @@
 }
 
 .project-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  /* Otimizações para melhor qualidade */
+  /* Renderização nativa para qualidade original */
   display: block;
-  image-rendering: auto;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  /* Melhor renderização para vídeos */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Forçar alta qualidade */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: optimize-contrast;
   /* Garantir que não apareçam controles */
   pointer-events: none;
+  /* Preencher completamente o container */
+  object-fit: cover;
+  border: none;
 }
 
 .project-card:hover .project-video {
   transform: scale(1.02);
 }
+
+/* Forçar centralização de todos os textos de projeto */
+.project-card * {
+  text-align: center !important;
+}
+
+.project-card h1,
+.project-card h2,
+.project-card h3,
+.project-card h4,
+.project-card h5,
+.project-card h6,
+.project-card p,
+.project-card span,
+.project-card div {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 
 /* Botão de tela cheia */
 .fullscreen-btn {
@@ -248,7 +286,7 @@
   cursor: pointer;
   padding: 8px;
   transition: all 0.3s ease;
-  z-index: 10;
+  z-index: 20;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 15px rgba(135, 206, 235, 0.3);
   /* Garantir que o botão funcione */
